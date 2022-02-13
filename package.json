@@ -1,0 +1,14 @@
+{
+  "name": "js-kata-template",
+  "version": "1.0.0",
+  "description": "Javascript code kata boilerplate template",
+  "main": "lib/example.js",
+  "scripts": {
+    "test": "npx jasmine"
+  },
+  "author": "Per Flitig",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^4.0.2"
+  }
+}
