@@ -1,4 +1,4 @@
-const { example } = require("../lib/example");
+const { getRomanNumerals } = require("../lib/example");
 
 /*
     Useful jasmine matchers, find more in official 
@@ -17,7 +17,27 @@ const { example } = require("../lib/example");
 */
 
 describe("example", () => {
-  it("should return true", () => {
-    expect(example()).toBeTrue();
+  it("should return empty strings if function is called without input", () => {
+    expect(getRomanNumerals()).toEqual("");
+  });
+
+  it("should return empty strings if function is called empty string", () => {
+    expect(getRomanNumerals("")).toEqual("");
+  });
+
+  it("should return empty strings if function is called with anything other than numbers", () => {
+    expect(getRomanNumerals("a")).toEqual("");
+  });
+
+  it("should return true when function is called with number", () => {
+    expect(getRomanNumerals(1)).toEqual("I");
+  });
+
+  it("should return true when function is called with number", () => {
+    expect(getRomanNumerals(2)).toEqual("II");
+  });
+
+  it("should return true when function is called with number", () => {
+    expect(getRomanNumerals(3)).toEqual("III");
   });
 });
